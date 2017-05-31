@@ -1,0 +1,14 @@
+<action-bar title="My App" class="action-bar"></action-bar>
+
+<stack-layout class="page">
+
+    <list-view [items]="items" class="list-group">
+        <ng-template let-item="item">
+
+            <Label [nsRouterLink]="['/item', item.id]"
+                   [text]="item.name" class="list-group-item"></Label>
+
+        </ng-template>
+    </list-view>
+
+</stack-layout>

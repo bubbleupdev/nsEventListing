@@ -1,0 +1,14 @@
+<action-bar title="Cynthia Woods Mitchell Pavilion Events" class="action-bar"></action-bar>
+
+<stack-layout class="page">
+
+    <list-view [events]="events" class="list-group">
+        <ng-template let-event="event">
+
+            <Label [nsRouterLink]="['/item', event.id]"
+                   [text]="event.title" class="list-group-item"></Label>
+
+        </ng-template>
+    </list-view>
+
+</stack-layout>
